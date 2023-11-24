@@ -4,8 +4,6 @@ title:  Efficient dependency version management
 date:   2023-11-20 01:45:42 +0100
 ---
 
-## Introduction
-
 When working with dependencies one commonly asked question is how to specify the dependencies in the package files (`pyproject.toml`, `Gemfile`, `package.json`, etc.), and why one would need lock files (`poetry.lock`, `Gemfile.lock`, `package-lock.json`). In this article, we will explore how dependency management can be easy and painless. Let's dive in!
 
 ## Version constraints
@@ -20,7 +18,7 @@ First, let's take a look at the different options available to define version co
 | Specified version constraint | Allowed new versions |
 | ---------------------------- | -------------------- |
 | ==1.2.3 | NEW_VERSION == 1.2.3
-| ^1.2.3 | 1.2.3 < NEW_VERSION < 2.0.0 |
+| ^1.2.3 | 1.2.3 <= NEW_VERSION < 2.0.0 |
 | ^0.2.3 | 0.2.3 <= NEW_VERSION < 0.3.0 |
 | ^0.0 | 0.0.0 <= NEW_VERSION < 0.1.0 |
 | ^0 | 0.0.0 <= NEW_VERSION < 1.0.0 |
